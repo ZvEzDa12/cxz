@@ -1,3 +1,7 @@
-.text {
-    color: rgb(170, 41, 95);
+.header .cities__link {
+  color: red;
+}
+
+.header__navigation {
+  background-color: #eeeeee;
 }
