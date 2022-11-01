@@ -11,7 +11,7 @@
   font-family: 'Futura PT Heavy';
   src: url('../assets/fonts/FuturaPT-Heavy.woff2') format('woff2'),
     url('../assets/fonts/FuturaPT-Heavy.woff') format('woff');
-  font-weight: 900;
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -41,13 +41,13 @@ a {
   text-decoration: none;
 }
 
+figure {
+  margin: 0;
+}
+
 img {
   max-width: 100%;
   height: auto;
-}
-
-figure {
-  margin: 0;
 }
 
 .list-reset {
@@ -95,12 +95,12 @@ figure {
   display: inline-block;
   padding: 5px 13px;
   border: 1px solid var(--ui-color);
-  border-radius: 10px;
   font-size: 0.875rem;
   line-height: 120%;
   color: var(--text-color);
   background-color: var(--ui-color);
   box-shadow: 3px 3px 5px rgba(244, 114, 32, 0.4);
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
@@ -130,12 +130,11 @@ figure {
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
-
 }
 
 .caret {
   position: relative;
-  display: inline-block;
+  display: block;
   width: 6.6px;
   height: 1px;
   margin-left: 2px;
@@ -173,24 +172,16 @@ figure {
   padding: 10px 0;
 }
 
+.header__logo {
+  flex-shrink: 0;
+}
+
 .header__cities {
   margin-left: auto;
 }
 
 .header__social {
   margin-left: 70px;
-}
-
-.header__logo {
-  flex-shrink: 0;
-}
-
-.header__contacts {
-  margin-left: 100px;
-}
-
-.header__call {
-  margin-left: 50px;
 }
 
 .header__contacts {
@@ -210,6 +201,10 @@ figure {
 .header__contacts p {
   margin: 0;
   font-size: 0.75rem;
+}
+
+.header__call {
+  margin-left: 50px;
 }
 
 .header__navigation {
@@ -239,15 +234,16 @@ figure {
   position: absolute;
   top: 0;
   left: 0;
+
   opacity: 0;
   pointer-events: none;
 }
 
 .social {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 19px;
-
 }
 
 .social li {
@@ -280,17 +276,16 @@ figure {
   align-items: center;
   font-size: 0.875rem;
   line-height: 130%;
-  color: var(--text-color)
+  color: var(--text-color);
 }
 
 .menu__link:hover,
-.menu__link_activate {
+.menu__link_active {
   color: var(--text-color-hover);
 }
 
 .submenu {
   display: none;
-
 }
 
 .section {
@@ -360,37 +355,13 @@ figure {
   z-index: 11;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 44.09%, rgba(255, 255, 255, 0.66) 93.06%);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 44.09%, rgba(255, 255, 255, 0.66) 93.06%);
 }
 
-.parent-container {
+.benefits__cards {
   display: flex;
-  flex-direction: column;
-  margin: 50px 20px;
-}
-
-.div {
-  width: 100px;
-  height: 100px;
-  padding: 25px;
-  font-size: 2rem;
-  margin: 10px;
-}
-
-.div_1 {
-  background-color: #f00;
-}
-
-.div_2 {
-  background-color: #0f0;
-}
-
-.div_3 {
-  background-color: #00f;
-}
-
-.div_4 {
-  background-color: #0ff;
+  justify-content: space-between;
+  padding-top: 46px;
 }
 
 .benefit-card {
@@ -398,11 +369,17 @@ figure {
   width: 275px;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 3px 3px 5px rgba(17, 17, 17, 0.25);
   background-color: var(--section-color);
+  box-shadow: 3px 3px 5px rgba(17, 17, 17, 0.25);
+}
+
+.benefit-card__text {
+  margin-top: 5px;
+  margin-bottom: 0;
 }
 
 .benefit-card__title {
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -415,9 +392,9 @@ figure {
   left: 50%;
   width: 70px;
   height: 70px;
-  transform: translate(-50%);
+  transform: translateX(-50%);
   background-color: var(--section-color);
-  border: 1px solid #ffffff;
-  box-shadow: 3px 3px 5px rgba(17, 17, 17, 0.25);
+  border: 1px solid #FFFFFF;
   border-radius: 50%;
+  box-shadow: 3px 3px 5px rgba(17, 17, 17, 0.25);
 }
